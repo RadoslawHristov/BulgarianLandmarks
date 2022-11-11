@@ -19,7 +19,15 @@ public class Program
         builder.Services.AddDatabaseDeveloperPageExceptionFilter();
         // add constructor in repositoty inject dbcontext and remove abstract class
 
-        builder.Services.AddDefaultIdentity<Users>(options => options.SignIn.RequireConfirmedAccount = false)
+        builder.Services.AddDefaultIdentity<Users>(options =>
+        {
+            options.SignIn.RequireConfirmedAccount = false;
+            options.Password.RequireDigit = true;
+            options.Password.RequireLowercase = true;
+            options.Password.RequiredLength = 6;
+            options.Password.RequireNonAlphanumeric = false;
+            options.User.RequireUniqueEmail = true;
+        })
             .AddEntityFrameworkStores<ApplicationDbContext>();
         builder.Services.AddControllersWithViews();
        

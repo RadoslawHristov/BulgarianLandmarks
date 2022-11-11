@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - My_Web_Project_LandMarks_</title>
+    <title>@ViewData["Title"] - Bulgarian LandMarks</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/My_Web_Project_LandMarks_.styles.css" asp-append-version="true" />
@@ -32,13 +32,13 @@
                             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                                 <ul class="navbar-nav">
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Dropdown
+                                        <a class="nav-link dropdown-toggle-dark" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Towns Info
                                         </a>
                                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                            <li><a class="dropdown-item" href="#">Action</a></li>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                            <li><a class="dropdown-item" asp-area="" asp-controller="Town" asp-action="Index">Town</a></li>
+                                            <li><a class="dropdown-item" href="#">Culture Event</a></li>
+                                            <li><a class="dropdown-item" href="#"></a></li>
                                         </ul>
                                     </li>
                                 </ul>
